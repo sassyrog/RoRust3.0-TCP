@@ -1,0 +1,83 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'rorust3_tcp'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=rorust3_tcp",
+					"--package=rorust3_tcp"
+				],
+				"filter": {
+					"name": "rorust3_tcp",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'rorust3_tcp'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=rorust3_tcp",
+					"--package=rorust3_tcp"
+				],
+				"filter": {
+					"name": "rorust3_tcp",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'intergration'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=intergration",
+					"--package=rorust3_tcp"
+				],
+				"filter": {
+					"name": "intergration",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'unit'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=unit",
+					"--package=rorust3_tcp"
+				],
+				"filter": {
+					"name": "unit",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		}
+	]
+}
